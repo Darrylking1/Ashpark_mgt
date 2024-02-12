@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+/* Global */
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Left Side */
+.bg-holder {
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Right Side */
+.right-container {
+    padding: 20px;
+}
+
+/* Logo */
+.right-container a img{
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.3s;
+    display: block;
+    margin-top: 20px;
+}
+
+/* Social Login */
+.btn {
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.btn i {
+    vertical-align: text-top;
+}
+
+.btn-outline-custom {
+    color: #31374a;
+    border-color: #ddd;
+}
+
+.btn-outline-custom:hover {
+    color: #31374a;
+    border-color: #eee;
+    background-color: #eee;
+}
+
+/* Divider */
+.divider-content-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    background-color: #fff;
+    font-weight: 500;
+    color: #999;
+}
+
+.divider {
+    margin: 2rem 0;
+}
