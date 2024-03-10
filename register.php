@@ -38,19 +38,19 @@
                                 <span class="input-group-text">
                                     <i class='bx bx-user'></i>
                                 </span>
-                                <input type="text" class="form-control form-control-lg fs-6" placeholder="Name">
+                                <input type="text" class="form-control form-control-lg fs-6" placeholder="First Name">
+                            </div>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">
+                                    <i class='bx bx-user'></i>
+                                </span>
+                                <input type="text" class="form-control form-control-lg fs-6" placeholder="Last Name">
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text">
                                     <i class='bx bx-id-card'></i>
                                 </span>
-                                <input type="text" class="form-control form-control-lg fs-6" placeholder="ID">
-                            </div>
-                            <div class="input-group mb-3">
-                                <span class="input-group-text">
-                                    <i class='bx bx-envelope'></i>
-                                </span>
-                                <input type="email" class="form-control form-control-lg fs-6" placeholder="Email">
+                                <input type="text" class="form-control form-control-lg fs-6" placeholder="ID Number">
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text">
@@ -60,15 +60,46 @@
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text">
+                                    <i class='bx bx-envelope'></i>
+                                </span>
+                                <input type="email" class="form-control form-control-lg fs-6" placeholder="Email" value="gfgs">
+                            </div>
+                            
+
+
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">
                                     <i class='bx bx-car'></i>
                                 </span>
-                                <input type="text" class="form-control form-control-lg fs-6" placeholder="Subscription Plan ID">
+                                <?php include_once './functions/select_role.php';?>
+                                <?php $Roletypes = getRoleTypes();?>
+                                <select class="form-select form-select-lg fs-6" aria-label="Role type">
+                                        <?php foreach ($Roletypes as $roles): ?>
+                                             <option value="<?php echo $roles['roleid']; ?>"><?php echo $roles['role_name']; ?></option>
+                                        <?php endforeach; ?>
+                                </select>
                             </div>
+
+                            
+
                             <div class="input-group mb-3">
                                 <span class="input-group-text">
                                     <i class='bx bx-lock-alt'></i>
                                 </span>
                                 <input type="password" class="form-control form-control-lg fs-6" placeholder="Password">
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">
+                                    <i class='bx bx-car'></i>
+                                </span>
+                                <?php include_once './functions/select_plan.php';?>
+                                <?php $plan = getSubscriptionPlans();?>
+                                <select class="form-select form-select-lg fs-6" aria-label="Subscription plan">
+                                        <?php foreach ($plan as $plans): ?>
+                                             <option value="<?php echo $plans['plan_id']; ?>"><?php echo $plans['plan_name']; ?></option>
+                                        <?php endforeach; ?>
+                                </select>
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text">

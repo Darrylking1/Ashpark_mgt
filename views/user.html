@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parking Management Dashboard</title>
+
+    <!-- Montserrat Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+
+    
+</head>
+<body>
+    <div class="grid-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="menu-icon" onclick="openSidebar()">
+                <span class="material-icons-outlined">menu</span>
+            </div>
+            <div class="header-left">
+                <span class="material-icons-outlined">search</span>
+            </div>
+            <div class="header-right">
+                <span class="material-icons-outlined">notifications</span>
+                <span class="material-icons-outlined">email</span>
+                <span class="material-icons-outlined">account_circle</span>
+            </div>
+        </header>
+        <!-- End Header -->
+
+        <!-- Sidebar -->
+        <aside id="sidebar">
+            <div class="sidebar-title">
+                <div class="sidebar-brand">
+                    <span class="icon">
+                        <img src="assets/images/logo.png" alt="logo">
+                    </span> 
+                </div>
+                <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+            </div>
+
+            <ul class="sidebar-list">
+                <li class="sidebar-list-item">
+                    <a href="dashboard-admin.html">
+                        <span class="material-icons-outlined">dashboard</span> Dashboard
+                    </a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="#">
+                        <span class="material-icons-outlined">analytics</span> Analytics
+                    </a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="slots.html">
+                        <span class="material-icons-outlined">local_parking</span> Slots
+                    </a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="user.html">
+                        <span class="material-icons-outlined">person</span> Users
+                    </a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="#">
+                        <span class="material-icons-outlined">subscriptions</span> Subscriptions
+                    </a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="#">
+                        <span class="material-icons-outlined">settings</span> Settings
+                    </a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="login.html">
+                        <span class="material-icons-outlined">logout</span> Logout
+                    </a>
+                </li>
+            </ul>
+        </aside>
+        <!-- End Sidebar -->
+
+        <!-- Main -->
+        <main>
+            <div class = "tabular--wrapper">
+                <h3 class = "main--title"> Users data</h3>
+                <div class="tabel-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Users name</th>
+                                <th>Users Id</th>
+                                <th>Subscription plan</th>
+                                <th>Role</th>
+                                <th>Email</th>
+                                <th>Phone Number</th>
+                            </tr>
+                            <tbody>
+                                <tr>
+                                    <td> Beryl Bampoe Addo</td>
+                                    <td>75832025</td>
+                                    <td>Yearly</td>
+                                    <td>Student</td>
+                                    <td>beryl.addo@ashesi.edu.gh</td>
+                                    <td>0505298278</td>
+        
+        
+                                </tr>
+                                <tr>
+                                    <td> Darryl King</td>
+                                    <td>70032025</td>
+                                    <td>Monthly</td>
+                                    <td>Student</td>
+                                    <td>darryl.king@ashesi.edu.gh</td>
+                                    <td>0244352278</td>
+        
+                                </tr>
+                                <tr>
+                                    <td> Brian Antswi</td>
+                                    <td>15322025</td>
+                                    <td>Daily</td>
+                                    <td>Student</td>
+                                    <td>brian.antswi@ashesi.edu.gh</td>
+                                    <td>0244263759</td>
+        
+                                </tr>
+                            </tbody>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </main>
+        <!-- End Main -->
+    </div>
+
+    <!-- Custom JS -->
+    <script src="assets/scripts/dashboard.js"></script>
+</body>
+</html>
