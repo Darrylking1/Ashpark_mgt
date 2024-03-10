@@ -1,8 +1,8 @@
 <?php
 $host = "localhost";
 $dbname = "ashpark_mgt";
-$username = "root"; // Replace with your actual database username
-$password = ""; // Replace with your actual database password
+$username = "root"; 
+$password = ""; 
 
 $conn = mysqli_connect($host, $username, $password, $dbname);
 
