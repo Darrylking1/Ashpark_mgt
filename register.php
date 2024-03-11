@@ -34,35 +34,52 @@
 
                         <!-- Form -->
                         <form action="#">
+                        <form action='./actions/register_action.php' method="POST">
                             <div class="input-group mb-3">
                                 <span class="input-group-text">
                                     <i class='bx bx-user'></i>
                                 </span>
+<<<<<<< Updated upstream
                                 <input type="text" class="form-control form-control-lg fs-6" placeholder="First Name">
+=======
+                                <input type="text" class="form-control form-control-lg fs-6" placeholder="First Name" name="firstName">
+>>>>>>> Stashed changes
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text">
                                     <i class='bx bx-user'></i>
                                 </span>
+<<<<<<< Updated upstream
                                 <input type="text" class="form-control form-control-lg fs-6" placeholder="Last Name">
+=======
+                                <input type="text" class="form-control form-control-lg fs-6" placeholder="Last Name" name="lastName">
+>>>>>>> Stashed changes
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text">
                                     <i class='bx bx-id-card'></i>
                                 </span>
+<<<<<<< Updated upstream
                                 <input type="text" class="form-control form-control-lg fs-6" placeholder="ID Number">
+=======
+                                <input type="text" class="form-control form-control-lg fs-6" placeholder="ID Number" name="idNumber">
+>>>>>>> Stashed changes
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text">
                                     <i class='bx bx-phone'></i>
                                 </span>
-                                <input type="tel" class="form-control form-control-lg fs-6" placeholder="Phone Number">
+                                <input type="tel" class="form-control form-control-lg fs-6" placeholder="Phone Number" name="phoneNumber">
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text">
                                     <i class='bx bx-envelope'></i>
                                 </span>
+<<<<<<< Updated upstream
                                 <input type="email" class="form-control form-control-lg fs-6" placeholder="Email" value="gfgs">
+=======
+                                <input type="email" class="form-control form-control-lg fs-6" placeholder="Email" name= "email">
+>>>>>>> Stashed changes
                             </div>
                             
 
@@ -73,22 +90,44 @@
                                 </span>
                                 <?php include_once './functions/select_role.php';?>
                                 <?php $Roletypes = getRoleTypes();?>
+<<<<<<< Updated upstream
                                 <select class="form-select form-select-lg fs-6" aria-label="Role type">
+=======
+                                <select class="form-select form-select-lg fs-6" aria-label="role_type" name="role_type">
+>>>>>>> Stashed changes
                                         <?php foreach ($Roletypes as $roles): ?>
                                              <option value="<?php echo $roles['roleid']; ?>"><?php echo $roles['role_name']; ?></option>
                                         <?php endforeach; ?>
                                 </select>
                             </div>
 
+<<<<<<< Updated upstream
+=======
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">
+                                    <i class='bx bx-car'></i>
+                                </span>
+                                <?php include_once './functions/select_plan.php';?>
+                                <?php include_once "settings/connection.php";?>
+                                <?php $plan = getSubscriptionPlans($conn);?>
+                                <select class="form-select form-select-lg fs-6" aria-label="subscription_plan" name="subscription_plan">
+                                        <?php foreach ($plan as $plans): ?>
+                                             <option value="<?php echo $plans['plan_id']; ?>"><?php echo $plans['plan_name']; ?></option>
+                                        <?php endforeach; ?>
+                                </select>
+                            </div>
+
+>>>>>>> Stashed changes
                             
 
                             <div class="input-group mb-3">
                                 <span class="input-group-text">
                                     <i class='bx bx-lock-alt'></i>
                                 </span>
-                                <input type="password" class="form-control form-control-lg fs-6" placeholder="Password">
+                                <input type="password" class="form-control form-control-lg fs-6" placeholder="Password" name="password">
                             </div>
 
+<<<<<<< Updated upstream
                             <div class="input-group mb-3">
                                 <span class="input-group-text">
                                     <i class='bx bx-car'></i>
@@ -101,6 +140,9 @@
                                         <?php endforeach; ?>
                                 </select>
                             </div>
+=======
+
+>>>>>>> Stashed changes
                             <div class="input-group mb-3">
                                 <span class="input-group-text">
                                     <i class='bx bx-lock-alt'></i>
@@ -120,5 +162,9 @@
         </div>
         <!-- Right Side -->
     </div>
+    <?php
+    // Close the connection
+    mysqli_close($conn);
+    ?>
 </body>
 </html>

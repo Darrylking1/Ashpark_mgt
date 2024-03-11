@@ -46,18 +46,18 @@
                         <!-- Divider -->
 
                         <!-- Form -->
-                        <form action="#">
+                        <form action="./actions/login_action.php" method="POST">
                             <div class="input-group mb-3">
                                 <span class="input-group-text">
                                     <i class='bx bx-user'></i>
                                 </span>
-                                <input type="text" class="form-control form-control-lg fs-6" placeholder="Username">
+                                <input type="text" class="form-control form-control-lg fs-6" placeholder="Enter your ID " name="ID_number">
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text">
                                     <i class='bx bx-lock-alt'></i>
                                 </span>
-                                <input type="password" class="form-control form-control-lg fs-6" placeholder="Password">
+                                <input type="password" class="form-control form-control-lg fs-6" placeholder="Password" name="password">
                             </div>
                             <div class="input-group mb-3 d-flex justify-content-between">
                                 <div class="form-check">
@@ -68,7 +68,7 @@
                                     <small><a href="#">Forgot Password?</a></small>
                                 </div>
                             </div>
-                            <button class="btn btn-primary btn-lg w-100">Login</button>
+                            <button type= "submit" class="btn btn-primary btn-lg w-100" name='login_button'>Login</button>
                         </form>
                         <!-- Form -->
 
