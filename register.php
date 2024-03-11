@@ -33,7 +33,6 @@
                         </div>
 
                         <!-- Form -->
-                        <form action="#">
                         <form action='./actions/register_action.php' method="POST">
                             <div class="input-group mb-3">
                                 <span class="input-group-text">
