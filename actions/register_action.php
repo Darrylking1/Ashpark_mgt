@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (mysqli_stmt_execute($stmt)) {
         // Redirect to login page if execution is successful
-        header("Location: ../login.html");
+        header("Location: ../login.php");
         exit();
     } else {
         // Redirect back to the registration page with an error message

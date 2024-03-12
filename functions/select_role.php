@@ -20,11 +20,7 @@ function getRoleTypes() {
     $Roletypes = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
     // Close the connection
-<<<<<<< Updated upstream
-    mysqli_close($conn);
-=======
     mysqli_free_result($result);
->>>>>>> Stashed changes
 
     // Return the role types array
     return $Roletypes;

@@ -73,7 +73,7 @@
                         <!-- Form -->
 
                         <div class="text-center">
-                            <small>Don't have an account? <a href="register.html" class="fw-bold">Sign Up</a></small>
+                            <small>Don't have an account? <a href="register.php" class="fw-bold">Sign Up</a></small>
                         </div>
                     </div>
                 </div>

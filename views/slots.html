@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parking Management Dashboard</title>
+    <title>Parking Slots Information</title>
 
     <!-- Montserrat Font -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -12,7 +12,8 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/styles/dashboard.css">
+    <link rel="stylesheet" href="../assets/styles/slots.css">
+    <link rel="stylesheet" href="../assets/styles/dashboard.css">
 </head>
 <body>
     <div class="grid-container">
@@ -37,7 +38,7 @@
             <div class="sidebar-title">
                 <div class="sidebar-brand">
                     <span class="icon">
-                        <img src="assets/images/logo.png" alt="logo">
+                        <img src="../assets/images/logo.png" alt="logo">
                     </span> 
                 </div>
                 <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
@@ -45,7 +46,7 @@
 
             <ul class="sidebar-list">
                 <li class="sidebar-list-item">
-                    <a href="dashboard-admin.html">
+                    <a href="../views/dashboard-admin.html">
                         <span class="material-icons-outlined">dashboard</span> Dashboard
                     </a>
                 </li>
@@ -55,12 +56,12 @@
                     </a>
                 </li>
                 <li class="sidebar-list-item">
-                    <a href="slots.html">
+                    <a href="../views/slots.html">
                         <span class="material-icons-outlined">local_parking</span> Slots
                     </a>
                 </li>
                 <li class="sidebar-list-item">
-                    <a href="user.html">
+                    <a href="../views/user.html">
                         <span class="material-icons-outlined">person</span> Users
                     </a>
                 </li>
@@ -75,7 +76,7 @@
                     </a>
                 </li>
                 <li class="sidebar-list-item">
-                    <a href="login.html">
+                    <a href="../login.php">
                         <span class="material-icons-outlined">logout</span> Logout
                     </a>
                 </li>
@@ -85,48 +86,37 @@
 
         <!-- Main -->
         <main class="main-container">
-            <div class="main-title">
-                <h2>Parking Management Dashboard</h2>
-            </div>
-
-            <div class="main-cards">
-
-                <div class="card">
-                    <div class="card-inner">
-                        <h3>Parking Slots</h3>
-                        <span class="material-icons-outlined">local_parking</span>
-                    </div>
-                    <h1>500</h1>
-                </div>
-
-                <div class="card">
-                    <div class="card-inner">
-                        <h3>Total Users</h3>
-                        <span class="material-icons-outlined">person</span>
-                    </div>
-                    <h1>1200</h1>
-                </div>
-
-                <div class="card">
-                    <div class="card-inner">
-                        <h3>Peak Parking Periods</h3>
-                        <span class="material-icons-outlined">schedule</span>
-                    </div>
-                    <h1>12:00 PM - 2:00 PM</h1>
-                </div>
-
-            </div>
-
-            <div class="charts">
-                <!-- Add charts here if needed -->
+            <h1>Parking Slot Information</h1>
+            <div class="slots-container">
+                <!-- Parking Slot Examples -->
+                <div class="slot available" id="PN001"><p>PN001</p><p>Available</p> </div>
+                <div class="slot occupied" id="PN002"><p>PN002</p><p>Occupied</p></div>
+                <div class="slot available" id="PN003"><p>PN003</p><p>Available</p></div>
+                <div class="slot unavailable" id="PN004"><p>PN004</p><p>Unavailable</p></div>
+                <div class="slot available" id="PN005"><p>PN005</p><p>Available</p></div>
+                <div class="slot available" id="PN006"><p>PN006</p><p>Available</p></div>
+                <div class="slot occupied" id="PN007"><p>PN007</p><p>Occupied</p></div>
+                <div class="slot unavailable" id="PN008"><p>PN008</p><p>Unavailable</p></div>
+                <div class="slot available" id="PN009"><p>PN009</p><p>Available</p></div>
+                <div class="slot available" id="PN010"><p>PN010</p><p>Available</p></div>
+                <div class="slot occupied" id="PN011"><p>PN011</p><p>Occupied</p></div>
+                <div class="slot unavailable" id="PN012"><p>PN012</p><p>Unavailable</p></div>
+                <div class="slot available" id="PN013"><p>PN013</p><p>Available</p></div>
+                <div class="slot available" id="PN014"><p>PN014</p><p>Available</p></div>
+                <div class="slot occupied" id="PN015"><p>PN015</p><p>Occupied</p></div>
+                <div class="slot unavailable" id="PN016"><p>PN016</p><p>Unavailable</p></div>
+                <div class="slot available" id="PN017"><p>PN017</p><p>Available</p></div>
+                <div class="slot available" id="PN018"><p>PN018</p><p>Available</p></div>
+                <div class="slot occupied" id="PN019"><p>PN019</p><p>Occupied</p></div>
+                <div class="slot unavailable" id="PN020"><p>PN020</p><p>Unavailable</p></div>
             </div>
         </main>
         <!-- End Main -->
+
     </div>
 
     <!-- Scripts -->
-    <!-- ApexCharts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.5/apexcharts.min.js"></script>
+
     <!-- Custom JS -->
     <script src="assets/scripts/dashboard.js"></script>
 </body>
