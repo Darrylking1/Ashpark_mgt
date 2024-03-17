@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,42 +30,40 @@
                         <img src="../assets/images/logo.png" alt="logo">
                     </span> 
                 </div>
-                <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
             </div>
 
             <ul class="sidebar-list">
+                <?php if ($_SESSION['role_id'] == 1 || $_SESSION['role_id'] == 2): ?>
+                    <li class="sidebar-list-item">
+                        <a href="../views/slots.php">
+                            <span class="material-icons-outlined">local_parking</span> Slots
+                        </a>
+                    </li>
+                    <li class="sidebar-list-item">
+                        <a href="../views/settings.php">
+                            <span class="material-icons-outlined">settings</span> Settings
+                        </a>
+                    </li>
+                <?php endif; ?>
+                <?php if ($_SESSION['role_id'] == 3): ?>
+                    <li class="sidebar-list-item">
+                        <a href="../views/dashboard.php">
+                            <span class="material-icons-outlined">dashboard</span> Dashboard
+                        </a>
+                    </li>
+                    <li class="sidebar-list-item">
+                        <a href="../views/analytics.php">
+                            <span class="material-icons-outlined">analytics</span> Analytics
+                        </a>
+                    </li>
+                    <li class="sidebar-list-item">
+                        <a href="../views/user.php">
+                            <span class="material-icons-outlined">person</span> Users
+                        </a>
+                    </li>
+                <?php endif; ?>
                 <li class="sidebar-list-item">
-                    <a href="dashboard-admin.html">
-                        <span class="material-icons-outlined">dashboard</span> Dashboard
-                    </a>
-                </li>
-                <li class="sidebar-list-item">
-                    <a href="analytics.html">
-                        <span class="material-icons-outlined">analytics</span> Analytics
-                    </a>
-                </li>
-                <li class="sidebar-list-item">
-                    <a href="slots.html">
-                        <span class="material-icons-outlined">local_parking</span> Slots
-                    </a>
-                </li>
-                <li class="sidebar-list-item">
-                    <a href="user.html">
-                        <span class="material-icons-outlined">person</span> Users
-                    </a>
-                </li>
-                <li class="sidebar-list-item">
-                    <a href="subcription.html">
-                        <span class="material-icons-outlined">subscriptions</span> Subscriptions
-                    </a>
-                </li>
-                <li class="sidebar-list-item">
-                    <a href="#">
-                        <span class="material-icons-outlined">settings</span> Settings
-                    </a>
-                </li>
-                <li class="sidebar-list-item">
-                    <a href="login.html">
+                    <a href="../login/login.php">
                         <span class="material-icons-outlined">logout</span> Logout
                     </a>
                 </li>

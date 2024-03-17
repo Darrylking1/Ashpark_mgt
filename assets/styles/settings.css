@@ -1,0 +1,49 @@
+/* settings.css */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 250px auto;
+    height: 100vh;
+}
+
+.settings-container {
+    padding: 20px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #800000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.message {
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+}

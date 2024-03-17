@@ -40,12 +40,13 @@ if (isset($_POST['login_button'])) {
     // Verify password user provided against database record using password_verify()
     if (password_verify($password, $row['password'])) {
         // Passwords match, continue with the processing
-        // Create session for user id and role id
+        // Create session for user id and role id and firstname
         $_SESSION['user_id'] = $row['user_id'];
         $_SESSION['role_id'] = $row['roleid'];
+        $_SESSION['firstname'] = $row['firstname'];
         
-        // Redirect to home/dashboard page
-        header("Location: ../views/dashboard-admin.html");
+        // Redirect to home page
+        header("Location: ../views/index.php");
         exit();
     } else {
         // Passwords don't match, provide appropriate response
