@@ -61,7 +61,7 @@ session_start();
                     </li>
                 <?php endif; ?>
                 <li class="sidebar-list-item">
-                    <a href="../login/login.php">
+                    <a href="../login/logout.php">
                         <span class="material-icons-outlined">logout</span> Logout
                     </a>
                 </li>

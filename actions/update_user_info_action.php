@@ -17,21 +17,37 @@ $user_id = $_SESSION['user_id'];
 
 // Retrieve form data
 $phoneNumber = $_POST['phoneNumber'];
-$password = $_POST['password'];
+$newPassword = $_POST['password'];
 $retypePassword = $_POST['retypePassword'];
 
-// Check if the new password matches the retype password
-if ($password !== $retypePassword) {
-    // Redirect the user to the settings page with an error message
-    header("Location: ../views/settings.php?error=password_mismatch");
-    exit();
+// Check if a new password is provided
+if (!empty($newPassword)) {
+    // Check if the new password matches the retype password
+    if ($newPassword !== $retypePassword) {
+        // Redirect the user to the settings page with an error message
+        header("Location: ../views/settings.php?error=password_mismatch");
+        exit();
+    }
+
+    // Hash the new password before storing it in the database (for security)
+    $hashedPassword = password_hash($newPassword, PASSWORD_DEFAULT);
+
+    // Update user's password in the database
+    $query = "UPDATE userinfo SET password='$hashedPassword' WHERE user_id='$user_id'";
+
+    // Execute the query
+    $result = mysqli_query($conn, $query);
+
+    // Check if query execution was successful
+    if (!$result) {
+        // Redirect the user to the settings page with an error message
+        header("Location: ../views/settings.php?error=database_error");
+        exit();
+    }
 }
 
-// Hash the password before storing it in the database (for security)
-$hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-
-// Update user's phone number and password in the database
-$query = "UPDATE userinfo SET tel='$phoneNumber', password='$hashedPassword' WHERE user_id='$user_id'";
+// Update user's phone number in the database
+$query = "UPDATE userinfo SET tel='$phoneNumber' WHERE user_id='$user_id'";
 
 // Execute the query
 $result = mysqli_query($conn, $query);

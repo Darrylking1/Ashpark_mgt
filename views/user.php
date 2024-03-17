@@ -63,7 +63,7 @@ include_once "../actions/get_all_user_info_action.php";
                     </li>
                 <?php endif; ?>
                 <li class="sidebar-list-item">
-                    <a href="../login/login.php">
+                    <a href="../login/logout.php">
                         <span class="material-icons-outlined">logout</span> Logout
                     </a>
                 </li>
