@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function initializeParkingTable() {
-    var parkingTableWrapper = document.querySelector('.table-container'); // Corrected selector
+    var parkingTableWrapper = document.querySelector('.table-container'); 
     parkingTableWrapper.classList.add('tabular-wrapper');
 
     var parkingTable = document.createElement('table');
@@ -79,7 +79,7 @@ function initializeParkingTable() {
 
 // Define the park function
 function park(slots) {
-    var statusElement = document.querySelector('#parkingTable tbody tr:nth-child(' + (parkingSpots.findIndex(function(spot) { return spot.slots === slots; }) + 1) + ') td:nth-child(2)');
+    var statusElement = document.querySelector('.table-container tbody tr:nth-child(' + (parkingSpots.findIndex(function(spot) { return spot.slots === slots; }) + 1) + ') td:nth-child(2)');
     statusElement.textContent = 'Unavailable';
 
     var parkButton = statusElement.nextElementSibling.firstChild;
@@ -99,7 +99,7 @@ function park(slots) {
 
 // Define the unpark function
 function unpark(slots) {
-    var statusElement = document.querySelector('#parkingTable tbody tr:nth-child(' + (parkingSpots.findIndex(function(spot) { return spot.slots === slots; }) + 1) + ') td:nth-child(2)');
+    var statusElement = document.querySelector('.table-container tbody tr:nth-child(' + (parkingSpots.findIndex(function(spot) { return spot.slots === slots; }) + 1) + ') td:nth-child(2)');
     statusElement.textContent = 'Available';
 
     var parkButton = statusElement.nextElementSibling.firstChild;

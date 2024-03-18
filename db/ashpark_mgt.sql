@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 22, 2024 at 10:37 PM
+-- Generation Time: Mar 13, 2024 at 07:13 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -20,6 +20,20 @@ SET time_zone = "+00:00";
 --
 -- Database: `ashpark_mgt`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `parking`
+--
+
+CREATE TABLE `parking` (
+  `id` int(11) NOT NULL,
+  `slot_number` int(11) NOT NULL,
+  `status` enum('slot_available','slot_occupied','slot_unavailable') NOT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  `check_in_time` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -95,8 +109,22 @@ CREATE TABLE `userinfo` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
+-- Dumping data for table `userinfo`
+--
+
+INSERT INTO `userinfo` (`user_id`, `firstname`, `lastname`, `roleid`, `ID_number`, `tel`, `email`, `password`, `plan_id`) VALUES
+(1, 'Bowl', 'Soil', 1, '19922933', '8320891212', 'soil@gmail.com', '$2y$10$2f8rgOYwTipxHIuX6GSiQe.WGjX0gA/3vsx0XM.ZnKQJWx74IALdy', 1);
+
+--
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `parking`
+--
+ALTER TABLE `parking`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `user_id` (`user_id`);
 
 --
 -- Indexes for table `roles`
@@ -130,6 +158,12 @@ ALTER TABLE `userinfo`
 --
 
 --
+-- AUTO_INCREMENT for table `parking`
+--
+ALTER TABLE `parking`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `roles`
 --
 ALTER TABLE `roles`
@@ -151,11 +185,17 @@ ALTER TABLE `subscription_plans`
 -- AUTO_INCREMENT for table `userinfo`
 --
 ALTER TABLE `userinfo`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Constraints for dumped tables
 --
+
+--
+-- Constraints for table `parking`
+--
+ALTER TABLE `parking`
+  ADD CONSTRAINT `parking_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `userinfo` (`user_id`);
 
 --
 -- Constraints for table `subscription_info`

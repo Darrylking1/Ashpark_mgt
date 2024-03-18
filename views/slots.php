@@ -18,8 +18,6 @@ session_start();
     <link rel="stylesheet" href="../assets/styles/user.css">
     <link rel="stylesheet" href="../assets/styles/dashboard.css">
 
-    <!-- Custom JS -->
-    <script src="../assets/scripts/parking.js"></script>
 </head>
 <body>
     <div class="grid-container">
@@ -75,12 +73,14 @@ session_start();
 
         <!-- Main -->
         <div class = "tabular-wrapper">
-        <h3 class = "main-title"> Users data</h3>
+        <h3 class = "main-title"> Parking Slot Information </h3>
                 <div class="table-container"></div>
         <!-- End Main -->
 
     </div>
 
     <!-- Scripts -->
+    <!-- Custom JS -->
+    <script src="../assets/scripts/parking.js"></script>
 </body>
 </html>

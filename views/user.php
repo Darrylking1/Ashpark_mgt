@@ -92,7 +92,7 @@ include_once "../actions/get_all_user_info_action.php";
                                 <?php foreach ($users_info as $user): ?>
                                     <tr>
                                         <td><?php echo $user['firstname']; ?></td>
-                                        <td><?php echo $user['firstname']; ?></td>
+                                        <td><?php echo $user['lastname']; ?></td>
                                         <td><?php echo $user['ID_number']; ?></td>
                                         <td><?php echo $user['plan_name']; ?></td>
                                         <td><?php echo $user['role_name']; ?></td>
