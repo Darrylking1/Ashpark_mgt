@@ -21,12 +21,6 @@ You can access the AshPark Management System using the following link:
 
 [http://18.133.105.236/Ashpark_mgt/]
 
-## Accessing the GitHub Repository
-
-You can access our GitHub repository using the following link:
-
-[https://github.com/Darrylking1/Ashpark_mgt]
-
 ## System Requirements
 
 - Web browser (Google Chrome, Mozilla Firefox, etc.)
