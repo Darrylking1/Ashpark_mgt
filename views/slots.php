@@ -15,8 +15,11 @@ session_start();
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="../assets/styles/slots.css">
+    <link rel="stylesheet" href="../assets/styles/user.css">
     <link rel="stylesheet" href="../assets/styles/dashboard.css">
+
+    <!-- Custom JS -->
+    <script src="../assets/scripts/parking.js"></script>
 </head>
 <body>
     <div class="grid-container">
@@ -71,39 +74,13 @@ session_start();
         <!-- End Sidebar -->
 
         <!-- Main -->
-        <main class="main-container">
-            <h1>Parking Slot Information</h1>
-            <div class="slots-container">
-                <!-- Parking Slot Examples -->
-                <div class="slot available" id="PN001"><p>PN001</p><p>Available</p> </div>
-                <div class="slot occupied" id="PN002"><p>PN002</p><p>Occupied</p></div>
-                <div class="slot available" id="PN003"><p>PN003</p><p>Available</p></div>
-                <div class="slot unavailable" id="PN004"><p>PN004</p><p>Unavailable</p></div>
-                <div class="slot available" id="PN005"><p>PN005</p><p>Available</p></div>
-                <div class="slot available" id="PN006"><p>PN006</p><p>Available</p></div>
-                <div class="slot occupied" id="PN007"><p>PN007</p><p>Occupied</p></div>
-                <div class="slot unavailable" id="PN008"><p>PN008</p><p>Unavailable</p></div>
-                <div class="slot available" id="PN009"><p>PN009</p><p>Available</p></div>
-                <div class="slot available" id="PN010"><p>PN010</p><p>Available</p></div>
-                <div class="slot occupied" id="PN011"><p>PN011</p><p>Occupied</p></div>
-                <div class="slot unavailable" id="PN012"><p>PN012</p><p>Unavailable</p></div>
-                <div class="slot available" id="PN013"><p>PN013</p><p>Available</p></div>
-                <div class="slot available" id="PN014"><p>PN014</p><p>Available</p></div>
-                <div class="slot occupied" id="PN015"><p>PN015</p><p>Occupied</p></div>
-                <div class="slot unavailable" id="PN016"><p>PN016</p><p>Unavailable</p></div>
-                <div class="slot available" id="PN017"><p>PN017</p><p>Available</p></div>
-                <div class="slot available" id="PN018"><p>PN018</p><p>Available</p></div>
-                <div class="slot occupied" id="PN019"><p>PN019</p><p>Occupied</p></div>
-                <div class="slot unavailable" id="PN020"><p>PN020</p><p>Unavailable</p></div>
-            </div>
-        </main>
+        <div class = "tabular-wrapper">
+        <h3 class = "main-title"> Users data</h3>
+                <div class="table-container"></div>
         <!-- End Main -->
 
     </div>
 
     <!-- Scripts -->
-
-    <!-- Custom JS -->
-    <script src="assets/scripts/dashboard.js"></script>
 </body>
 </html>

@@ -76,32 +76,31 @@ session_start();
             </div>
 
             <div class="main-cards">
-
-                <div class="card">
+                <div class="card" id="parkingSlotsCard">
                     <div class="card-inner">
                         <h3>Parking Slots</h3>
                         <span class="material-icons-outlined">local_parking</span>
                     </div>
-                    <h1>500</h1>
+                    <h1>20</h1>
                 </div>
 
-                <div class="card">
+                <div class="card" id="totalUsersCard">
                     <div class="card-inner">
                         <h3>Total Users</h3>
                         <span class="material-icons-outlined">person</span>
                     </div>
-                    <h1>1200</h1>
+                    <h1>1000</h1>
                 </div>
 
-                <div class="card">
+                <div class="card" id="parkingAvailability">
                     <div class="card-inner">
-                        <h3>Peak Parking Periods</h3>
+                        <h3>Parking Availability</h3>
                         <span class="material-icons-outlined">schedule</span>
                     </div>
-                    <h1>12:00 PM - 2:00 PM</h1>
+                    
                 </div>
-
             </div>
+        
 
             <div class="charts">
                 <!-- Add charts here if needed -->
@@ -114,6 +113,7 @@ session_start();
     <!-- ApexCharts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.5/apexcharts.min.js"></script>
     <!-- Custom JS -->
-    <script src="assets/scripts/dashboard.js"></script>
+    <script src="../assets/scripts/dashboard.js"></script>
+    <script src="../assets/scripts/admin.js"></script>
 </body>
 </html>

@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -72,7 +75,7 @@
         <main>
             <div class="charts">
                 <div class="chart">
-                    <h2>Peak Parking Periods</h2>
+                    <h2>Available Parking Spots</h2>
                     <canvas id="parkingAvailabilityChart" width="1000" height="600"></canvas>
                 </div>
             </div>

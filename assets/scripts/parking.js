@@ -20,17 +20,20 @@ var parkingSpots = [
     { slots: 'PN018', status: 'Available' },
     { slots: 'PN019', status: 'Available' },
     { slots: 'PN020', status: 'Available' }
-    // Add more parking spots as needed
+
 ];
 // Function to initialize the parking table
+document.addEventListener('DOMContentLoaded', function() { 
+    initializeParkingTable();
+});
+
 function initializeParkingTable() {
-    var parkingTableWrapper = document.createElement('div');
-    parkingTableWrapper.classList.add('tabular--wrapper');
+    var parkingTableWrapper = document.querySelector('.table-container'); // Corrected selector
+    parkingTableWrapper.classList.add('tabular-wrapper');
 
     var parkingTable = document.createElement('table');
     parkingTable.classList.add('table-container');
     
-
     // Create table header
     var thead = document.createElement('thead');
     var headerRow = document.createElement('tr');
@@ -72,13 +75,7 @@ function initializeParkingTable() {
     parkingTable.appendChild(tbody);
 
     parkingTableWrapper.appendChild(parkingTable);
-
-    // Append the table wrapper to the document body
-    document.body.appendChild(parkingTableWrapper);
 }
-
-// Call the initializeParkingTable function when the page loads
-window.addEventListener('load', initializeParkingTable);
 
 // Define the park function
 function park(slots) {
