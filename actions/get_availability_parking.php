@@ -4,7 +4,7 @@ include_once '../settings/connection.php';
 
 try {
     // Establish database connection using PDO
-    $pdo = new PDO("mysql:host=localhost;dbname=ashpark_mgt", "root", "");
+    $pdo = new PDO("mysql:host=localhost;dbname=ashpark_mgt.sql;port=3308", "root", "");
 
     // Query to fetch parking availability data
     $query = "SELECT check_in_time, check_out_time, status FROM parking ORDER BY check_in_time";

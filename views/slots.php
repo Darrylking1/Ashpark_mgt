@@ -18,6 +18,8 @@ session_start();
     <link rel="stylesheet" href="../assets/styles/user.css">
     <link rel="stylesheet" href="../assets/styles/dashboard.css">
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </head>
 <body>
     <div class="grid-container">

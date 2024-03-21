@@ -75,7 +75,7 @@ session_start();
         <main>
             <div class="charts">
                 <div class="chart">
-                    <h2>Available Parking Spots</h2>
+                    <h2>Peak Parking Periods</h2>
                     <canvas id="parkingAvailabilityChart" width="1000" height="600"></canvas>
                 </div>
             </div>
@@ -143,6 +143,15 @@ session_start();
 
         // Call the function to create the line chart when the page loads
         createLineChart();
+
+        // Function to periodically update the chart
+        setInterval(async () => {
+            // Clear existing chart
+            Chart.getChart("parkingAvailabilityChart").destroy();
+
+            // Re-create the chart with updated data
+            await createLineChart();
+        }, 5000); // Update every 5 seconds (adjust interval as needed)
     </script>
 
 </body>
