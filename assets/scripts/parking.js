@@ -93,9 +93,6 @@ function initializeParkingTable() {
     parkingTableWrapper.appendChild(parkingTable);
 }
 
-// Call the initializeParkingTable function when the page loads
-window.addEventListener('load', initializeParkingTable);
-
 // Define the park function
 function park(slots) {
     // Check if the user is already parked

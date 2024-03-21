@@ -38,21 +38,25 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             // Store the parked slot in session
             $_SESSION['parkedSlot'] = $slots;
             
-            // Prepare and execute SQL query to update check-in time, slot, and status
-            $query = "UPDATE parking SET check_in_time = ?, status = ? WHERE slots = ?";
+            // Retrieve user_id from session
+            $user_id = $_SESSION['user_id'];
+            
+            // Prepare and execute SQL query to update check-in time, slot, status, and user_id
+            $query = "UPDATE parking SET check_in_time = ?, status = ?, user_id = ? WHERE slots = ?";
             $statement = $pdo->prepare($query);
-            $statement->execute([$timestamp, $status, $slots]);
+            $statement->execute([$timestamp, $status, $user_id, $slots]);
         } elseif ($action === "unpark") {
             // Update status to 'Available' when unpacking
             
             // Clear the parked slot from session
             unset($_SESSION['parkedSlot']);
             
-            // Prepare and execute SQL query to update check-out time and status
+            // Prepare and execute SQL query to update check-out time, status, and user_id
             $status = 'Available';
-            $query = "UPDATE parking SET check_out_time = ?, status = ? WHERE slots = ?";
+            $user_id = null; // Reset user_id when unparking
+            $query = "UPDATE parking SET check_out_time = ?, status = ?, user_id = ? WHERE slots = ?";
             $statement = $pdo->prepare($query);
-            $statement->execute([$timestamp, $status, $slots]);
+            $statement->execute([$timestamp, $status, $user_id, $slots]);
         }
         
         // Check if update was successful
